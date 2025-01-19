@@ -1,0 +1,52 @@
+[
+    {
+        "isim": "Açı",
+        "tanim": "İki doğru arasındaki açı ölçüsüdür.",
+        "link": "https://en.wikipedia.org/wiki/Angle"
+    },
+    {
+        "isim": "Sinüs",
+        "tanim": "Karşı kenarın hipotenüse oranıdır.",
+        "link": "https://en.wikipedia.org/wiki/Sine"
+    },
+    {
+        "isim": "Kosinüs",
+        "tanim": "Komşu kenarın hipotenüse oranıdır.",
+        "link": "https://en.wikipedia.org/wiki/Cosine"
+    },
+    {
+        "isim": "Tanjant",
+        "tanim": "Karşı kenarın komşu kenara oranıdır.",
+        "link": "https://en.wikipedia.org/wiki/Tangent"
+    },
+    {
+        "isim": "Kotanjant",
+        "tanim": "Tanjantın tersi olarak komşu kenarın karşı kenara oranıdır.",
+        "link": "https://en.wikipedia.org/wiki/Cotangent"
+    },
+    {
+        "isim": "Sekant",
+        "tanim": "Kosinüs fonksiyonunun tersi olarak hipotenüsün komşu kenara oranıdır.",
+        "link": "https://en.wikipedia.org/wiki/Secant_(trigonometry)"
+    },
+    {
+        "isim": "Kosekant",
+        "tanim": "Sinüs fonksiyonunun tersi olarak hipotenüsün karşı kenara oranıdır.",
+        "link": "https://en.wikipedia.org/wiki/Cosecant"
+    },
+    {
+        "isim": "Hipotenüs",
+        "tanim": "Bir dik üçgende, dik açının karşısındaki en uzun kenardır.",
+        "link": "https://en.wikipedia.org/wiki/Hypotenuse"
+    },
+    {
+        "isim": "Radyan",
+        "tanim": "Bir çemberin merkez açısının radyan cinsinden ölçüsüdür.",
+        "link": "https://en.wikipedia.org/wiki/Radian"
+    },
+    {
+        "isim": "Birim Çember",
+        "tanim": "Merkezi orijinde ve yarıçapı 1 birim olan bir çemberdir.",
+        "link": "https://en.wikipedia.org/wiki/Unit_circle"
+    }
+]

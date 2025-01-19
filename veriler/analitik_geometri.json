@@ -1,0 +1,47 @@
+[
+    {
+        "isim": "Doğru",
+        "tanim": "İki nokta arasında uzanan düz çizgidir.",
+        "link": "https://en.wikipedia.org/wiki/Line_(geometry)"
+    },
+    {
+        "isim": "Doğru Parçası",
+        "tanim": "Başlangıç ve bitiş noktaları belirlenmiş doğru parçasıdır.",
+        "link": "https://en.wikipedia.org/wiki/Line_segment"
+    },
+    {
+        "isim": "Eğri",
+        "tanim": "Düz bir doğru olmayan, sürekli bir yol oluşturan geometrik şekildir.",
+        "link": "https://en.wikipedia.org/wiki/Curve"
+    },
+    {
+        "isim": "Parabol",
+        "tanim": "Düzlemde sabit bir noktaya ve bir doğruya eşit uzaklıkta bulunan noktaların geometrik yeridir.",
+        "link": "https://en.wikipedia.org/wiki/Parabola"
+    },
+    {
+        "isim": "Elips",
+        "tanim": "Düzlemde iki odak noktası ile tanımlanan kapalı eğridir.",
+        "link": "https://en.wikipedia.org/wiki/Ellipse"
+    },
+    {
+        "isim": "Koordinat Sistemi",
+        "tanim": "Bir düzlemdeki noktaların, sayı çiftleri olarak ifade edilmesine olanak tanır.",
+        "link": "https://en.wikipedia.org/wiki/Coordinate_system"
+    },
+    {
+        "isim": "Eğim",
+        "tanim": "Bir doğru üzerindeki yükselme ve yatay mesafe oranıdır.",
+        "link": "https://en.wikipedia.org/wiki/Slope"
+    },
+    {
+        "isim": "Orta Nokta",
+        "tanim": "Bir doğru parçasının ortasında yer alan noktadır.",
+        "link": "https://en.wikipedia.org/wiki/Midpoint"
+    },
+    {
+        "isim": "Mesafe Formülü",
+        "tanim": "İki nokta arasındaki mesafeyi bulmak için kullanılan formüldür.",
+        "link": "https://en.wikipedia.org/wiki/Distance_formula"
+    }
+]

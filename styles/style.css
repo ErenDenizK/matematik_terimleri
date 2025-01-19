@@ -1,0 +1,750 @@
+/* -------------------------
+   Sıfırlama (Reset CSS)
+------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------------
+   Genel Sayfa Stilleri
+------------------------- */
+/* Genel Gövde */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #f8f9fa; /* Hafif gri arka plan */
+    padding-bottom: 5rem;
+    margin: 0;
+}
+
+/* -------------------------
+   Header (Başlık)
+------------------------- */
+header {
+    background-color: #003f63; /* Koyu Deniz Mavisi */
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.4rem; /* Daha büyük font */
+    color: #e0f7fa; /* Hafif açık mavi */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Hafif gölge */
+    margin-top: 1rem;
+}
+
+/* -------------------------
+   Navigasyon Menüsü
+------------------------- */
+.nav-container {
+    background-color: #0078a7; /* İkincil Mavi */
+    border-radius: 20px; /* Yuvarlak köşeler */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    padding: 10px 15px;
+    margin: 0 auto; /* Ortalamak için */
+    display: flex;
+    justify-content: center; /* Yatayda ortalama */
+    align-items: center; /* Dikeyde ortalama */
+    width: fit-content; /* İçeriğe göre genişlik */
+    position: relative; /* Konumlandırmayı etkinleştirmek için */
+    top: -60px; /* Başlık altına yerleştirmek için negatif margin */
+    transform: translateY(50%); /* Alt sınırla ortalanmasını sağlar */
+    transition: all 0.3s ease-in-out; /* Hareketli yapı için */
+}
+
+nav a {
+    color: #e0f7fa; /* Hafif açık mavi */
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; /* Sabit padding */
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    position: relative; /* Efektler için */
+    font-size: 1rem; /* Sabit font boyutu */
+    display: inline-block;
+    transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Yumuşak geçiş */
+}
+
+/* Hover Durumu */
+nav a:hover {
+    color: #FFD166; /* Altın sarısı */
+    background: linear-gradient(90deg, rgba(255, 229, 153, 0.4), rgba(255, 215, 102, 0.6)); /* Çift renk geçişi */
+    box-shadow: 0 0 10px rgba(255, 215, 102, 0.5), 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif parlama */
+    transform: scale(1.05); /* Hafif büyütme */
+}
+
+/* Hover Glow Efekti */
+nav a:hover::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 20px; /* Yuvarlak dış glow */
+    background: rgba(255, 215, 102, 0.1); /* Hafif dış parlama */
+    z-index: -1;
+    box-shadow: 0 0 20px rgba(255, 215, 102, 0.3), 0 0 30px rgba(255, 215, 102, 0.2); /* Hafif parlama */
+    animation: pulseGlow 1.5s infinite; /* Nefes alma animasyonu */
+}
+
+/* Glow Animasyonu */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 215, 102, 0.3), 0 0 20px rgba(255, 215, 102, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(255, 215, 102, 0.4), 0 0 35px rgba(255, 215, 102, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 215, 102, 0.3), 0 0 20px rgba(255, 215, 102, 0.2);
+    }
+}
+
+/* Active Durumu */
+nav a.active {
+    color: #FFE599; /* Altın sarısı */
+    background: linear-gradient(90deg, rgba(240, 200, 120, 0.3), rgba(240, 200, 120, 0.4)); /* Hafif çift renk */
+    box-shadow: inset 0 0 5px rgba(255, 215, 102, 0.6), 0 2px 5px rgba(0, 0, 0, 0.1); /* İç gölge efekti */
+    border: 2px solid rgba(255, 215, 102, 0.6); /* İnce bir kenarlık */
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    transform: scale(1.02); /* Hafif büyütme */
+    transition: all 0.4s ease-in-out; /* Daha yumuşak geçiş */
+}
+
+/* Giriş Animasyonu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+nav a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+nav a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+nav a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column; /* Menü elemanlarını dikey hizala */
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav a {
+        text-align: center;
+        width: 100%;
+        padding: 15px 0; /* Daha büyük tıklanabilir alan */
+        border-radius: 0; /* Yuvarlatmayı kaldır */
+    }
+
+    nav a:hover {
+        transform: none; /* Mobilde hover efekti sınırlı */
+    }
+
+    nav a:hover::after {
+        display: none; /* Hover glow efektini kaldır */
+    }
+}
+
+/* -------------------------
+   Arama Menüsü
+------------------------- */
+.search-container {
+    position: fixed;
+    top: 310px; /* Yeni top değeri */
+    right: 20px;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #003f63; /* Koyu Deniz Mavisi (Yeni Renk Paleti) */
+    border-radius: 20px;
+    transition: width 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-container:hover {
+    width: 250px; /* Hover sırasında genişleme */
+    background-color: #0078a7; /* İkincil Mavi (Yeni Palet) */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hover gölgesi */
+}
+
+.search-input {
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    color: #ffffff; /* Placeholder ve yazı için beyaz */
+    opacity: 0; /* İlk durumda görünmez */
+    transition: opacity 0.3s ease;
+}
+
+.search-container:hover .search-input {
+    opacity: 1; /* Hover sırasında placeholder görünür */
+}
+
+.search-icon {
+    font-size: 20px;
+    color: #ffffff; /* Simge rengi beyaz */
+    pointer-events: none;
+    margin-left: -35px;
+}
+
+.search-input::placeholder {
+    color: #d6e4ff; /* Açık Mavi Placeholder */
+    font-style: italic;
+    opacity: 1;
+}
+
+/* -------------------------
+   Highlight Özelliği
+------------------------- */
+.highlight {
+    background-color: #ffeb3b;
+    color: #333;
+    padding: 0.2rem 0.1rem;
+    border-radius: 5px;
+}
+
+/* -------------------------
+   İçerik Alanı
+------------------------- */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+/* Ana Sayfa İçerik - Başlıklar ve Paragraflar */
+.container h2 {
+    font-size: 2rem; /* Daha büyük başlık */
+    color: #003f63; /* Koyu mavi */
+    text-align: left; /* Sola hizalı */
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    animation: fadeInDown 1s ease; /* Giriş animasyonu */
+}
+
+.container p {
+    font-size: 1.2rem; /* Daha okunaklı paragraf */
+    line-height: 1.8; /* Satır aralığı */
+    color: #444; /* Koyu gri */
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    animation: fadeIn 1.2s ease; /* Fade-in animasyonu */
+}
+
+/* Listeler */
+.container ul {
+    list-style: none; /* Varsayılan madde işaretlerini kaldır */
+    padding: 0;
+}
+
+.container ul li {
+    font-size: 1.1rem; /* Liste öğelerinin boyutu */
+    margin: 0.5rem 0;
+    padding: 0.8rem 1rem;
+    background: #f9f9f9; /* Hafif gri arka plan */
+    border-radius: 10px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: fadeInUp 1s ease; /* Giriş animasyonu */
+}
+
+/* Liste İşaretleri */
+.container ul li::before {
+    content: "✔️"; /* Onay işareti */
+    font-size: 1.2rem;
+    color: #007acc; /* Mavi */
+}
+
+/* Hover ve Glow Efekti */
+.container ul li:hover {
+    background: #e0f7fa; /* Hafif açık mavi */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge */
+    transform: translateY(-2px); /* Hafif yukarı kalkma */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* -------------------------
+   İçerik Linkler
+------------------------- */
+/* Link Stili */
+.container a {
+    color: #0073e6; /* Normal durumdaki link rengi */
+    text-decoration: none; /* Alt çizgi olmadan */
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease; /* Renk ve büyüme animasyonu */
+}
+
+/* Hover Durumunda */
+.container a:hover {
+    color: #0056b3; /* Hover durumunda link rengi */
+    transform: scale(1.05); /* Hafif büyüme efekti */
+}
+
+/* Alt Çizgi Animasyonu */
+.container a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Çizgi alt tarafta */
+    width: 100%;
+    height: 2px;
+    background: #0073e6; /* Alt çizgi rengi */
+    transform: scaleX(0); /* Başlangıçta görünmez */
+    transform-origin: right; /* Sağdan sola doğru görünür */
+    transition: transform 0.3s ease; /* Animasyon süresi */
+}
+
+/* Hover Durumunda Alt Çizgi */
+.container a:hover::after {
+    transform: scaleX(1); /* Alt çizgi tam olarak görünür */
+    transform-origin: left; /* Soldan sağa doğru yayılır */
+}
+
+/* -------------------------
+   Features (Proje Özellikleri)
+------------------------- */
+.features {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 1.8rem; /* Başlık boyutu */
+    color: #003f63; /* Koyu mavi */
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.features ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Yazıları düzenli hizala */
+    font-size: 1rem; /* Liste yazı boyutu */
+    color: #003f63; /* Yazı rengi */
+    background: #ffffff; /* Beyaz arka plan */
+    padding: 1rem; /* Daha geniş padding */
+    margin: 0.5rem auto;
+    max-width: 500px; /* Liste genişliği */
+    border-radius: 12px; /* Hafif yuvarlak köşeler */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    position: relative; /* Hover efekt için */
+    overflow: hidden; /* Taşma engelleme */
+    transition: all 0.3s ease-in-out;
+}
+
+.features ul li span {
+    font-weight: bold;
+    z-index: 2; /* Üst katmanda yazı */
+}
+
+/* Özellikler Parlama ve Hover Efekti */
+.features ul li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 229, 153, 0.3); /* Hafif sarımsı parlama */
+    z-index: 1;
+    transform: skewX(-30deg);
+    transition: all 0.5s ease;
+}
+
+.features ul li:hover::before {
+    left: 100%;
+    transition: all 0.5s ease;
+}
+
+.features ul li:hover {
+    transform: scale(1.05); /* Hafif büyütme */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge */
+}
+
+/* Liste Simgesi */
+.features ul li::after {
+    content: "✨";
+    font-size: 1.2rem;
+    margin-left: auto;
+    color: #FFD166; /* Altın sarısı */
+    animation: pulseGlow 2s infinite; /* Hafif nefes alma animasyonu */
+}
+
+/* Parlama Animasyonu */
+@keyframes pulseGlow {
+    0%, 100% {
+        text-shadow: 0 0 3px #FFD166, 0 0 6px #FFD166;
+    }
+    50% {
+        text-shadow: 0 0 10px #FFD166, 0 0 15px #FFD166;
+    }
+}
+
+/* Responsive - Mobil için */
+@media (max-width: 768px) {
+    .features ul li {
+        font-size: 0.9rem; /* Yazı boyutunu küçült */
+        padding: 0.8rem 1rem; /* Daha dar padding */
+        max-width: 90%; /* Mobil uyumlu genişlik */
+    }
+
+    .features h2 {
+        font-size: 1.5rem; /* Küçük başlık */
+    }
+}
+
+/* -------------------------
+   Liste Stilleri
+------------------------- */
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+li a {
+    color: #0073e6;
+}
+
+/* -------------------------
+   Sözlük Alanı
+------------------------- */
+#list-container {
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+#list-container h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #004080;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+#list-container ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+#list-container li {
+    display: block; /* Flex yerine block yapısı */
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#list-container li b {
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+#list-container li a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+#list-container li::before {
+    content: "➤"; /* Simge */
+    color: #004080;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    flex-shrink: 0; /* Simgenin kaymamasını sağlar */
+}
+
+#list-container b {
+    font-weight: bold;
+    color: #333;
+}
+
+#list-container p {
+    margin: 0;
+}
+
+#list-container a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* -------------------------
+   Footer
+------------------------- */
+footer {
+    background-color: #004466; /* Ana mavi */
+    color: #e0f7fa; /* Hafif açık mavi */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); /* Hafif gölge */
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+footer a {
+    color: #FFD166 !important; /* Sıcak altın sarısı */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); /* Hafif gölge */
+    text-decoration: none !important; /* Varsayılan alt çizgiyi kaldırır */
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFE599 !important; /* Daha açık altın sarısı */
+    text-shadow: 0 2px 4px rgba(255, 215, 102, 0.6); /* Daha belirgin parlama efekti */
+}
+
+footer small {
+    font-size: 0.85rem; /* Daha küçük bilgi yazıları */
+    color: rgba(255, 255, 255, 0.7); /* Hafif şeffaf beyaz */
+    display: block;
+    margin-top: 0.5rem;
+    font-style: italic; /* Daha zarif görünüm */
+}
+
+/* -------------------------
+   Giriş Animasyonları
+------------------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+nav a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+nav a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+nav a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* -------------------------
+   Responsive Tasarım
+------------------------- */
+@media (max-width: 768px) {
+    header {
+        padding: 4rem 1rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* -------------------------
+   Hoş Geldiniz Ekranı
+------------------------- */
+#welcome-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#welcome-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* -------------------------
+   Mobil Responsive Tasarım
+------------------------- */
+
+/* Header */
+@media (max-width: 768px) {
+    header {
+        padding: 2rem 1rem;
+    }
+    header h1 {
+        font-size: 2rem; /* Küçük ekranlar için daha uygun */
+    }
+    header p {
+        font-size: 1rem; /* Daha küçük yazı */
+    }
+}
+
+/* Navigasyon Menüsü */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column; /* Menü elemanlarını dikey hizala */
+        width: 100%;
+        padding: 10px 0;
+        top: -100px
+    }
+    nav a {
+        width: 100%; /* Menü elemanları tam genişlik */
+        text-align: center; /* Yazıları ortala */
+        padding: 15px 0; /* Daha büyük tıklanabilir alan */
+        border-radius: 0; /* Yuvarlatmayı kaldır */
+    }
+    nav a:hover {
+        transform: none; /* Mobilde hover efekti sınırlı */
+    }
+    nav a:hover::after {
+        display: none; /* Hover glow efektini kaldır */
+    }
+}
+
+/* Genel Konteyner */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Genişliği ekrana göre ayarla */
+        padding: 1rem; /* Daha az padding */
+    }
+}
+
+/* Liste Stilleri (Sözlük Alanı) */
+@media (max-width: 768px) {
+    #list-container ul {
+        padding-left: 1rem;
+    }
+    #list-container li {
+        font-size: 0.9rem; /* Yazı boyutunu küçült */
+        margin: 0.3rem 0; /* Daha dar aralık */
+    }
+}
+
+/* Responsive Animasyonlar */
+@media (max-width: 768px) {
+    nav a {
+        transition: none; /* Mobilde animasyonları devre dışı bırak */
+    }
+}

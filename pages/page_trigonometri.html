@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometri - Matematik Terimleri Sözlüğü</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body data-file="../veriler/trigonometri.json">
+    <!-- Başlık -->
+    <header>
+        <h1>11. Sınıf Matematik Terimleri Sözlüğü</h1>
+        <p>Trigonometriye giriş yapın!</p>
+    </header>
+
+    <!-- Navigasyon Menüsü -->
+    <div class="nav-container">
+        <nav>
+            <a href="../pages/page_!home.html?from=nav">Ana Sayfa</a>
+            <a href="../pages/page_analitik_geometri.html">Analitik Geometri</a>
+            <a href="../pages/page_trigonometri.html" class="active">Trigonometri</a>
+        </nav>
+    </div>
+
+    <!-- Arama Menüsü -->
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Ara...">
+        <span class="search-icon">🔍</span>
+    </div>
+
+    <!-- İçerik -->
+    <main class="container">
+        <h2>Trigonometri</h2>
+        <p>Trigonometri, üçgenlerin açıları ve kenarları arasındaki ilişkileri inceleyen matematik dalıdır.</p>
+
+        <!-- JSON Verileri Buraya Yazılacak -->
+        <div id="list-container"></div>
+    </main>
+
+    <!-- Alt bilgi -->
+    <footer>
+        <p>
+            © 2025 <a href="mailto:denizkuyucakli1@gmail.com">Eren Deniz Kuyucaklıoğlu</a> /
+            <a href="mailto:karayelbugra7@gmail.com">Buğra Karayel</a>
+        </p>
+        <small>Bu site hala prototipleme aşamasındadır.</small>
+    </footer>
+
+    <script src="../app.js"></script>
+    <script>
+        // Aktif navigasyon bağlantısını ayarla
+        function setActiveNav() {
+            const navLinks = document.querySelectorAll('.nav-container nav a');
+            const currentPath = window.location.pathname;
+
+            navLinks.forEach(link => {
+                if (link.getAttribute('href').includes(currentPath)) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // Sayfa yüklendiğinde çalıştır
+        document.addEventListener('DOMContentLoaded', setActiveNav);
+    </script>
+</body>
+</html>

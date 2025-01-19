@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik Terimleri Sözlüğü</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <!-- Hoş Geldiniz Ekranı -->
+    <div id="welcome-screen">
+        <b>Hoş Geldiniz!</b>
+    </div>
+
+    <!-- Başlık -->
+    <header>
+        <h1>11. Sınıf Matematik Terimleri Sözlüğü</h1>
+        <p>Matematik dünyasında keşfe çık!</p>
+    </header>
+
+    <!-- Navigasyon Menüsü -->
+    <nav class="nav-container">
+        <a href="../pages/page_!home.html" class="active">Ana Sayfa</a>
+        <a href="../pages/page_analitik_geometri.html">Analitik Geometri</a>
+        <a href="../pages/page_trigonometri.html">Trigonometri</a>
+    </nav>
+
+    <!-- İçerik -->
+    <main class="container">
+        <!-- Hakkında Bölümü -->
+        <section id="hakkinda">
+            <h2>Hakkında</h2>
+            <p>
+                11. Sınıf Matematik Terimleri Sözlüğü, öğrencilerin matematik terimlerini hızlı ve kolay bir şekilde öğrenmesine 
+                yardımcı olmayı amaçlar. Bu platform, sade bir dil ve anlaşılır tanımlarla öğrenme sürecini destekler.
+            </p>
+        </section>
+
+        <!-- Proje Detayları -->
+        <section id="fonksiyonlar">
+            <h2>Proje Detayları</h2>
+            <p>
+                Matematik öğrenimini kolaylaştırmak için tasarlanan bu proje, 11. sınıf öğrencilerinin matematik terimlerine hızlı 
+                ve anlaşılır bir şekilde ulaşmasını hedefliyor. Kullanıcı dostu arayüzü ve mobil uyumlu yapısıyla bilgiye 
+                ulaşımı hızlandırmak amacıyla tasarlandı.
+            </p>
+            <ul>
+                <li><strong>Amaç:</strong> Matematik terimlerini sade bir dille açıklamak.</li>
+                <li><strong>Özellikler:</strong> Dinamik arama, hızlı listeleme, modern ve mobil uyumlu tasarım.</li>
+                <li><strong>Teknolojik Altyapı:</strong> HTML, CSS ve JavaScript.</li>
+            </ul>         
+        </section>
+
+        <!-- Özellikler -->
+        <section class="features">
+            <h2>Proje Özellikleri</h2>
+            <ul>
+                <li class="feature-item">
+                    🌟 <span>Modern Kullanıcı Arayüzü</span>
+                </li>
+                <li class="feature-item">
+                    💡 <span>Hover ve Glow Animasyonları</span>
+                </li>
+                <li class="feature-item">
+                    📘 <span>Dinamik Arama Özelliği</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Rapor Bölümü -->
+        <section id="rapor">
+            <h2>Rapor</h2>
+            <p>
+                Projenin detaylı raporunu
+                <a href="../assets/files/WebRapor.pdf" target="_blank">buradan</a> inceleyebilirsiniz.
+            </p>
+        </section>
+    </main>
+
+    <!-- Alt Bilgi -->
+    <footer>
+        <p>
+            © 2025 <a href="mailto:denizkuyucakli1@gmail.com">Eren Deniz Kuyucaklıoğlu</a> /
+            <a href="mailto:karayelbugra7@gmail.com">Buğra Karayel</a>
+        </p>
+        <small>Bu site hala prototipleme aşamasındadır.</small>
+    </footer>
+
+    <script>
+        // Welcome ekranı elementini al
+        const welcomeScreen = document.getElementById('welcome-screen');
+    
+        // URL parametrelerini kontrol et
+        const urlParams = new URLSearchParams(window.location.search);
+        const fromNav = urlParams.get('from');
+    
+        // Eğer 'from' parametresi 'nav' ise welcome ekranını gizle
+        if (fromNav === 'nav') {
+            welcomeScreen.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Kaydırmayı geri aç
+        } else {
+            // İlk açılış: Welcome ekranını göster ve ardından gizle
+            setTimeout(() => {
+                welcomeScreen.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 1500);
+        }
+    
+        // Aktif navigasyon bağlantısını ayarla
+        function setActiveNav() {
+            const navLinks = document.querySelectorAll('.nav-container a');
+            const currentPath = window.location.pathname.replace(/\/$/, "");
+
+            navLinks.forEach(link => {
+                const linkPath = new URL(link.href, window.location.origin).pathname.replace(/\/$/, "");
+                if (currentPath === linkPath) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', setActiveNav);
+    </script>
+</body>
+</html>
